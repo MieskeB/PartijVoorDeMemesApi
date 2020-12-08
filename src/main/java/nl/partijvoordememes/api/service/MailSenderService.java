@@ -30,8 +30,8 @@ public class MailSenderService {
         mailSender.setHost("smtp.partijvoordememes.nl");
         mailSender.setPort(587);
 
-        mailSender.setUsername("info@partijvoordememes.nl");
-        mailSender.setPassword("123");
+        mailSender.setUsername(System.getProperty("EMAIL_USERNAME"));
+        mailSender.setPassword(System.getProperty("EMAIL_PASSWORD"));
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
