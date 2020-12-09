@@ -16,7 +16,7 @@ public class CorsConfig {
                         .allowCredentials(false)
                         .allowedOrigins("*")
                         .allowedMethods("*")
-                        .allowedHeaders("*")
+                        .exposedHeaders("g-recaptcha-response")
                 ;
             }
         };
